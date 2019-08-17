@@ -1,10 +1,13 @@
 import React from 'react'
+import StyledPlaylistItem from '/styles/StyledPlaylistItem'
 
-const PlaylistItem = props => {
+const PlaylistItem = ({ video, active, played }) => {
     return (
-        <div>
-           PlaylistItem!!
-        </div>
+        <StyledPlaylistItem active={active} played={played}>
+           <div className="rv-player__video-nr">{video.num}</div>
+           <div className="rv-player__video-name">{video.title}</div>
+           <div className="rv-player__video-time">{video.duration}</div>
+        </StyledPlaylistItem>
     )
 }
 
